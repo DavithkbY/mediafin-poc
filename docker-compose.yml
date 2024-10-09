@@ -26,11 +26,11 @@ services:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
       - ./package.json:/opt/package.json
-      - ./yarn.lock:/opt/yarn.lock
+      - ./package-lock.lock:/opt/package-lock.lock
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
-      - "1337:80"
+      - "1337:1337"
     networks:
       - strapi
     depends_on:
