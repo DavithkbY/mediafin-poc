@@ -1,3 +1,8 @@
+# documentation: https://docs.example.com/
+# slogan: Strapi service
+# tags: strapi
+# logo: svgs/strapi.svg
+# port: 1337
 version: "3"
 services:
   strapi:
