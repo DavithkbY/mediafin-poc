@@ -1,8 +1,3 @@
-# documentation: https://docs.example.com/
-# slogan: Strapi service
-# tags: strapi
-# logo: svgs/strapi.svg
-# port: 1337
 version: "3"
 services:
   strapi:
@@ -24,9 +19,7 @@ services:
       NODE_ENV: ${NODE_ENV}
     volumes:
       - ./config:/opt/app/config
-      - ./tsconfig.json:/opt/app/tsconfig.json
       - ./src:/opt/app/src
-      - ./types:/opt/app/types
       - ./package.json:/opt/package.json
       - ./package-lock.json:/opt/package-lock.json
       - ./.env:/opt/app/.env
