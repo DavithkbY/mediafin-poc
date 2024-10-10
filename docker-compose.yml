@@ -8,7 +8,7 @@ services:
   strapi:
     container_name: strapi
     build: .
-    image: davithkb/mediafin-strapi:latest
+    image: davithkb/mediafin-strapi:dev
     restart: unless-stopped
     env_file: .env
     environment:
@@ -25,8 +25,9 @@ services:
     volumes:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
+      - ./types:/opt/app/types
       - ./package.json:/opt/package.json
-      - ./package-lock.lock:/opt/package-lock.lock
+      - ./package-lock.json:/opt/package-lock.json
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
